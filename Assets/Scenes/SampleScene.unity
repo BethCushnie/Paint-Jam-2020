@@ -130,10 +130,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4222714}
+  - component: {fileID: 4222716}
   - component: {fileID: 4222713}
   - component: {fileID: 4222712}
   - component: {fileID: 4222715}
-  - component: {fileID: 4222716}
   m_Layer: 0
   m_Name: Character
   m_TagString: Untagged
@@ -264,7 +264,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94fbbdaf409ebc340b0315cc3441cacb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MovementSpeed: 1
+  MovementSpeed: 6
+  CharacterRigidbody: {fileID: 4222712}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0

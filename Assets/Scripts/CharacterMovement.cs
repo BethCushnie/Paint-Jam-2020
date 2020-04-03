@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class CharacterMovement : MonoBehaviour
 {
-    public float MovementSpeed = 1;
+    public float MovementSpeed;
+    public Rigidbody2D CharacterRigidbody;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -17,6 +18,8 @@ public class CharacterMovement : MonoBehaviour
     {
         Vector2 movement = GetInputMovementVector() * MovementSpeed * Time.deltaTime;
         transform.position += new Vector3(movement.x, movement.y, 0);
+
+        RunJumping();
     }
 
     Vector2 GetInputMovementVector()
@@ -29,9 +32,14 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
             movement.x--;
 
-        if (Input.GetKeyDown(KeyCode.Space))
-            movement.y++;
-
         return movement;
+    }
+
+    void RunJumping()
+    {
+        Vector2 force = new Vector2(0, 100);
+
+        if (Input.GetKeyDown(KeyCode.Space))
+            CharacterRigidbody.AddForce(force);
     }
 }
