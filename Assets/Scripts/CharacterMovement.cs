@@ -6,6 +6,7 @@ public class CharacterMovement : MonoBehaviour
 {
     public float MovementSpeed;
     public Rigidbody2D CharacterRigidbody;
+    public Vector2 JumpForce;
 
     // Start is called before the first frame update
     void Start()
@@ -37,9 +38,7 @@ public class CharacterMovement : MonoBehaviour
 
     void RunJumping()
     {
-        Vector2 force = new Vector2(0, 750);
-
         if (Input.GetKeyDown(KeyCode.Space))
-            CharacterRigidbody.AddForce(force);
+            CharacterRigidbody.AddForce(JumpForce);
     }
 }
