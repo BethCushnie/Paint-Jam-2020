@@ -37,7 +37,7 @@ public class CharacterMovement : MonoBehaviour
 
     void RunJumping()
     {
-        Vector2 force = new Vector2(0, 100);
+        Vector2 force = new Vector2(0, 750);
 
         if (Input.GetKeyDown(KeyCode.Space))
             CharacterRigidbody.AddForce(force);
