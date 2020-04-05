@@ -8,30 +8,15 @@ public class CharacterMovement : MonoBehaviour
     public Rigidbody2D CharacterRigidbody;
     public Vector2 JumpForce;
     public BoxCollider2D CharacterCollider;
-    public Vector2 WallJumpForce;
-    public BoxCollider2D LeftSideCollider;
-    public BoxCollider2D RightSideCollider;
 
-    public float DisableInputForThisManySecondsAfterWalljump = 0.3f;
-
-
-    float CountdownToEnableInput = 0f;
 
     void Update()
     {
-        if (CountdownToEnableInput > 0)
-        {
-            CountdownToEnableInput -= Time.deltaTime;
-            return;
-        }
-
         Vector2 velocity = new Vector2(GetHorizontalMovementInput() * MovementSpeed, CharacterRigidbody.velocity.y);
         CharacterRigidbody.velocity = velocity;
 
-
         if (IsTouchingWorld())
             RunJumping();
-
     }
 
     float GetHorizontalMovementInput()
@@ -52,18 +37,6 @@ public class CharacterMovement : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             CharacterRigidbody.AddForce(JumpForce);
-
-            if (IsTouchingWallToLeft())
-            {
-                PushToRight();
-                CountdownToEnableInput = DisableInputForThisManySecondsAfterWalljump;
-            }
-
-            if (IsTouchingWallToRight())
-            {
-                PushToLeft();
-                CountdownToEnableInput = DisableInputForThisManySecondsAfterWalljump;
-            }
         }
     }
 
@@ -94,43 +67,4 @@ public class CharacterMovement : MonoBehaviour
             return true;
     }
 
-    bool IsTouchingWallToRight()
-    {
-        Vector2 point = RightSideCollider.bounds.center;
-        Vector2 size = RightSideCollider.bounds.size;
-        float angle = 0;
-
-        Collider2D overlappedCollider = Physics2D.OverlapBox(point, size, angle);
-
-        if (overlappedCollider == null)
-            return false;
-
-        else
-            return true;
-    }
-
-    bool IsTouchingWallToLeft()
-    {
-        Vector2 point = LeftSideCollider.bounds.center;
-        Vector2 size = LeftSideCollider.bounds.size;
-        float angle = 0;
-
-        Collider2D overlappedCollider = Physics2D.OverlapBox(point, size, angle);
-
-        if (overlappedCollider == null)
-            return false;
-
-        else
-            return true;
-    }
-
-    void PushToLeft()
-    {
-        CharacterRigidbody.AddForce(-WallJumpForce);
-    }
-
-    void PushToRight()
-    {
-        CharacterRigidbody.AddForce(WallJumpForce);
-    }
 }

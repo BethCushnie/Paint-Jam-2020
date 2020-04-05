@@ -226,7 +226,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4222711}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 124.7, y: -151.6, z: 0}
+  m_LocalPosition: {x: -165.5, y: -153.32, z: 0}
   m_LocalScale: {x: 0.493, y: 0.493, z: 0.493}
   m_Children:
   - {fileID: 1711321024}
@@ -278,10 +278,6 @@ MonoBehaviour:
   CharacterRigidbody: {fileID: 4222712}
   JumpForce: {x: 0, y: 2000}
   CharacterCollider: {fileID: 4222715}
-  WallJumpForce: {x: 500, y: 0}
-  LeftSideCollider: {fileID: 1526724782}
-  RightSideCollider: {fileID: 292738306}
-  DisableInputForThisManySecondsAfterWalljump: 0.3
 --- !u!1001 &19681687
 PrefabInstance:
   m_ObjectHideFlags: 0
