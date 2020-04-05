@@ -12,24 +12,28 @@ public class CharacterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 movement = GetInputMovementVector() * MovementSpeed * Time.deltaTime;
-        transform.position += new Vector3(movement.x, movement.y, 0);
+        //Vector2 movement = GetHorizontalMovementInput() * MovementSpeed * Time.deltaTime;
+        //transform.position += new Vector3(movement.x, movement.y, 0);
+
+        Vector2 velocity = new Vector2(GetHorizontalMovementInput() * MovementSpeed, CharacterRigidbody.velocity.y);
+        CharacterRigidbody.velocity = velocity;
+
 
         if (IsTouchingWorld())
             RunJumping();
     }
 
-    Vector2 GetInputMovementVector()
+    float GetHorizontalMovementInput()
     {
-        Vector2 movement = new Vector2();
+        float horizontalMovement = 0;
 
         if (Input.GetKey(KeyCode.D))
-            movement.x++;
+            horizontalMovement++;
 
         if (Input.GetKey(KeyCode.A))
-            movement.x--;
+            horizontalMovement--;
 
-        return movement;
+        return horizontalMovement;
     }
 
     void RunJumping()
