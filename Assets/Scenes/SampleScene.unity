@@ -7055,7 +7055,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
 --- !u!224 &1350926190
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7072,8 +7072,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 223.9, y: 296.4}
-  m_SizeDelta: {x: 20, y: 5}
+  m_AnchoredPosition: {x: 195.5, y: 275.53}
+  m_SizeDelta: {x: 14.148, y: 5}
   m_Pivot: {x: 5.403019, y: 27.519215}
 --- !u!4 &1351818863 stripped
 Transform:
@@ -9544,15 +9544,15 @@ RectTransform:
   m_GameObject: {fileID: 1711321023}
   m_LocalRotation: {x: -0, y: -0, z: 0.003604529, w: 0.9999935}
   m_LocalPosition: {x: 0, y: 0, z: -12.3}
-  m_LocalScale: {x: 7.407505, y: 7.407505, z: 7.407505}
+  m_LocalScale: {x: 7.4075046, y: 7.4075046, z: 7.407505}
   m_Children: []
   m_Father: {fileID: 4222714}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.41300002}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -19.7, y: 3.5}
-  m_SizeDelta: {x: 4.35, y: 0.76}
+  m_AnchoredPosition: {x: -2.15, y: 1.66}
+  m_SizeDelta: {x: 2.583, y: 0.57}
   m_Pivot: {x: 0.3962332, y: -0.9426065}
 --- !u!114 &1711321025
 MonoBehaviour:
@@ -9581,8 +9581,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190335
-  m_fontColor: {r: 1, g: 0, b: 0, a: 1}
+    rgba: 4294902178
+  m_fontColor: {r: 0.6335232, g: 0.0047169924, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -9600,8 +9600,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 6
-  m_fontSizeBase: 6
+  m_fontSize: 4
+  m_fontSizeBase: 4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9638,7 +9638,7 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: -0.080422126}
+  m_margin: {x: 0, y: 0.117573634, z: 0, w: -0.080422126}
   m_textInfo:
     textComponent: {fileID: 1711321025}
     characterCount: 13
@@ -9718,7 +9718,7 @@ MeshRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 20
 --- !u!4 &1712406262 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 399679161300334652, guid: d975e9f699b9ac44693a4af11f5dd89b,
